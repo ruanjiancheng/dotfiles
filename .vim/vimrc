@@ -1,0 +1,64 @@
+let mapleader=" "
+syntax on
+
+set number
+
+set cursorline
+
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+exec "nohlsearch"
+
+nnoremap = nzz
+nnoremap - Nzz
+
+nnoremap <LEADER><CR> :nohlsearch<CR>
+nnoremap sj :set splitright<CR>:vsplit<CR>
+nnoremap sk :set nosplitright<CR>:vspilt<CR>
+
+set noshowcmd
+set wrap
+set autowrite
+
+set smarttab
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set fileencodings=utf-9,gb2312,gbk,gb18030
+
+nnoremap tt :NERDTreeToggle<CR>
+
+nnoremap J 5j
+nnoremap K 5k
+
+nnoremap go :PlugInstall<CR>
+
+call plug#begin()
+
+Plug 'connorholyday/vim-snazzy'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'wakatime/vim-wakatime'
+
+Plug 'Raimondi/delimitMate'
+
+Plug 'tpope/vim-sensible'
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'preservim/nerdtree'
+
+Plug 'dracula/vim', {'as': 'dracula'}
+
+call plug#end()
+
+colorscheme dracula
+
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#branch#enabled=1
+let g:airline_powerline_fonts=1
+
