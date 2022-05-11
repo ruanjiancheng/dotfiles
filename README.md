@@ -1,2 +1,2 @@
 # dotfiles
-my linux dotfiles for fun
+linux dotfiles for fun
